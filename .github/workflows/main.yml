@@ -1,6 +1,6 @@
 name: CI/CD Pratica1-app
 
-on: 
+on:
   push:
     branches: [ 'dev','stg','main']
   workflow_dispatch:
@@ -9,3 +9,17 @@ on:
         description: 'manual workflow dispatch'
         required: true
         default: 'reason to run the workflow'
+
+
+env:
+  APP NAME: eafit-app NAMESPACE: default
+  IMAGE TAG: ${{ github.sha}}
+  GCP_REGISTRY: us-central1-docker.pkg.dev
+  GCP_REPOSITORY: practica-ar
+  GCP_PROJECT_ID: cluster-sis-dis
+  #GKE_CLUSTER: eafit-cluster
+  #GKE ZONE: us-centrall
+
+  #ASPNETCORE_ENVIRONMENT: ${{ vars.ASPNETCORE_ENVIRONMENT }}
+  #AUTHOR: ${{ vars.AUTHOR }}
+  #SQL_CONNECTION: ${{ secrets.SQL_CONNECTION }}
