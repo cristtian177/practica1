@@ -1,0 +1,11 @@
+name: CI/CD Pratica1-app
+
+on: 
+  push:
+    branches: [ 'dev','stg','main']
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'manual workflow dispatch'
+        required: true
+        default: 'reason to run the workflow'
